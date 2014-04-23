@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_police"
+        android:icon="@drawable/w_police_icon"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/police_light"/>
+    <item
+        android:id="@+id/menu_warnning"
+        android:icon="@drawable/w_warning_icon"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/warning_light"/>
+    <item
+        android:id="@+id/menu_morse"
+        android:icon="@drawable/w_morse_icon"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/morse_code"/>
+    <item
+        android:id="@+id/menu_color"
+        android:icon="@drawable/w_color_icon"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/screen_color"/>
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/w_settings_icon"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/menu_exit"
+        android:icon="@drawable/w_apps_icon"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/exit"/>
+
+</menu>

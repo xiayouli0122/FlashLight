@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">多功能手电筒</string>
+    <string name="action_settings">设置</string>
+	
+    <string name="no_support_flashlight">当前设备没有闪光灯</string>
+    <string name="double_back_exit">再按一次退出程序</string>
+    
+    <string name="input_morse_code">请输入摩尔斯电码字符串！</string>
+    <string name="morse_input_tip">摩尔斯电码只能是字母和数字！</string>
+    <string name="input_morse_tip">请输入摩尔斯电码字符串（只能输入字母、数字和空格）</string>
+    <string name="send">发送</string>
+    <string name="send_over">发送完成</string>
+    <string name="sending">正在发送：%1s</string>
+    
+    <string name="shortcut_added">已成功将快捷方式添加到桌面！</string>
+    <string name="shortcut_exist">快捷方式已经添加到桌面上，无法再添加快捷方式！</string>
+    <string name="no_shortcut">没有快捷方式，无法删除</string>
+    
+    <string name="police_light">警灯</string>
+    <string name="warning_light">警示灯</string>
+    <string name="morse_code">摩尔斯电码</string>
+    <string name="screen_color">屏幕灯</string>
+    <string name="exit">退出</string>
+    
+    <string name="color_light_tip">彩色灯：点击屏幕显示调色板</string>
+    <string name="flightLight_tip">长时间使用可能会减少\n电池寿命</string>
+    
+    <string name="policelight_flash_freq">警灯闪烁频率</string>
+    <string name="warninglight_flash_freq">警示灯闪烁频率</string>
+    <string name="slow">慢</string>
+    <string name="fast">快</string>
+    
+    <string name="add_shortcut">添加快捷方式</string>
+    <string name="remove_shortcut">移除快捷方式</string>
+</resources>
+

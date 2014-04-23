@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_morse"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:orientation="vertical"
+     >
+     
+    <TextView 
+        android:id="@+id/tv_morse_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:background="#f00"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_morse_tip"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="120dp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_morse_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:text="SOS"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+    
+    <Button 
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/send"
+        />
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_color_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F00"
+     >
+
+    <com.yuri.flashlight.widget.HideTextView
+        android:id="@+id/tv_hide_color_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/color_light_tip"
+        android:textSize="20sp" />
+
+</FrameLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView 
+        android:id="@+id/tv_battery"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/battery1"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginTop="30dp"
+        />
+    
+    <ToggleButton
+        android:id="@+id/tb_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/power"
+        android:textOff=""
+        android:textOn="" />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/flightLight_tip"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/w_led_disclaimer"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        />
+
+</RelativeLayout>
