@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
@@ -19,8 +21,6 @@ import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
@@ -79,7 +79,7 @@ public class MainUIActivity extends BaseActivity implements OnClickListener, OnC
 		
 		mMediaPlayer = new MediaPlayer();
 		
-		forceShowMenuKey(getWindow());
+		FLUtils.forceShowMenuKey(getWindow());
 		
 		mBatteryTV = (TextView) findViewById(R.id.tv_battery);
 		mPowerButton = (ToggleButton) findViewById(R.id.tb_power);
@@ -92,6 +92,16 @@ public class MainUIActivity extends BaseActivity implements OnClickListener, OnC
 		mBatteryReceiver = new BatteryReceiver();
 		// 注册receiver
 		registerReceiver(mBatteryReceiver, intentFilter);
+		
+		SharedPreferences sp = getSharedPreferences(Constants.APP_FIRST_START, MODE_PRIVATE);
+		boolean isFirstStart = sp.getBoolean(Constants.APP_FIRST_START, true);
+		if (isFirstStart) {
+			FLUtils.createShortcut(getApplicationContext());
+			//
+			Editor editor = sp.edit();
+			editor.putBoolean(Constants.APP_FIRST_START, false);
+			editor.commit();
+		}
 	}
 	
 	@Override
@@ -210,23 +220,6 @@ public class MainUIActivity extends BaseActivity implements OnClickListener, OnC
 
 		mMediaPlayer = MediaPlayer.create(MainUIActivity.this, sid);
 		mMediaPlayer.start();
-	}
-	
-	/**
-	 * force show virtual menu key </br>
-	 * must call after setContentView() 
-	 * @param window you can use getWindow()
-	 */
-	private void forceShowMenuKey(Window window){
-		try {
-			window.addFlags(WindowManager.LayoutParams.class.getField("FLAG_NEEDS_MENU_KEY").getInt(null));
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (NoSuchFieldException e) {
-			e.printStackTrace();
-		}
 	}
 	
 	private long mExitTime = 0;

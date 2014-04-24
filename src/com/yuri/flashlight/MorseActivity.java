@@ -73,7 +73,6 @@ public class MorseActivity extends BaseActivity {
 		mSendBtn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				mSendBtn.setEnabled(false);
 				startSend();
 			}
 		});
@@ -124,6 +123,7 @@ public class MorseActivity extends BaseActivity {
 			return;
 		}
 		if (verifyMorseCode()) {
+			mSendBtn.setEnabled(false);
 			mHandler.sendMessage(mHandler.obtainMessage(MSG_SENDING));
 			new Thread(new Runnable() {
 				@Override

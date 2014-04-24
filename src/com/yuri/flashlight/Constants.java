@@ -7,4 +7,6 @@ public class Constants {
 	public static final int DEFAULT_WARNINGLIGHT_LEVEL = 300;
 	public static final String POLICELIGHT_LEVEL = "policelight_level";
 	public static final String WARNINGLIGHT_LEVEL = "warninglight_level";
+	
+	public static final String APP_FIRST_START = "app_first_start";
 }

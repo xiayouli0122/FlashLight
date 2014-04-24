@@ -16,6 +16,7 @@
     
     <string name="shortcut_added">已成功将快捷方式添加到桌面！</string>
     <string name="shortcut_exist">快捷方式已经添加到桌面上，无法再添加快捷方式！</string>
+    <string name="shortcut_removed">成功移除快捷方式</string>
     <string name="no_shortcut">没有快捷方式，无法删除</string>
     
     <string name="police_light">警灯</string>
