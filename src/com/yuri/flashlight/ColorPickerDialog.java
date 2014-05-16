@@ -52,9 +52,6 @@ public class ColorPickerDialog extends Dialog {
 		int width = (int) (manager.getDefaultDisplay().getWidth() * 0.8f);
 		ColorPickerView myView = new ColorPickerView(context, height, width);
 		setContentView(myView);
-//		setContentView(R.layout.color_dialog);
-//		ColorPickerView colorPickerView = (ColorPickerView) findViewById(R.id.colorpickerview);
-		System.out.println("title=" + title);
 		setTitle(title);
 	}
 

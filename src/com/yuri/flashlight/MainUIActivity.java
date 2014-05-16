@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.pm.FeatureInfo;
 import android.content.pm.PackageManager;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
@@ -165,8 +166,12 @@ public class MainUIActivity extends BaseActivity implements OnClickListener, OnC
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		playSounds(R.raw.click);
-		if (!getPackageManager().hasSystemFeature(
-				PackageManager.FEATURE_CAMERA_FLASH)) {
+//		if (!getPackageManager().hasSystemFeature(
+//				PackageManager.FEATURE_CAMERA_FLASH)) {
+//			Toast.makeText(this, R.string.no_support_flashlight, Toast.LENGTH_LONG).show();
+//			return;
+//		}
+		if (!isSupportFlash()) {
 			Toast.makeText(this, R.string.no_support_flashlight, Toast.LENGTH_LONG).show();
 			return;
 		}
@@ -177,6 +182,18 @@ public class MainUIActivity extends BaseActivity implements OnClickListener, OnC
 		} else {
 			closeFlashlight();
 		}
+	}
+	
+	private boolean isSupportFlash(){
+		PackageManager pm = getPackageManager();
+		FeatureInfo[] features = pm.getSystemAvailableFeatures();
+		for (FeatureInfo featureInfo : features) {
+			System.out.println("" + featureInfo.name);
+			if (PackageManager.FEATURE_CAMERA_FLASH.equals(featureInfo.name)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	// open flash light
