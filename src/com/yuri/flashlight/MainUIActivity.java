@@ -112,7 +112,8 @@ public class MainUIActivity extends BaseActivity implements OnClickListener, OnC
 		mCustomMenu = new CustomMenu(getApplicationContext(), menu, R.style.PopupAnimation);
 		mCustomMenu.setOnMenuItemClick(this);
 		mCustomMenu.update();
-		return super.onCreateOptionsMenu(menu);
+//		return super.onCreateOptionsMenu(menu);
+		return false;
 	}
 	
 	@Override

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">多功能手电筒</string>
+    <string name="app_name">手电筒</string>
     <string name="action_settings">设置</string>
 	
     <string name="no_support_flashlight">当前设备没有闪光灯</string>
@@ -26,7 +26,7 @@
     <string name="exit">退出</string>
     
     <string name="color_light_tip">彩色灯：点击屏幕显示调色板</string>
-    <string name="flightLight_tip">长时间使用可能会减少\n电池寿命</string>
+    <string name="flightLight_tip">长时间使用可能会减少\n电池寿命\nCopyright ©2014 Yuri</string>
     
     <string name="policelight_flash_freq">警灯闪烁频率</string>
     <string name="warninglight_flash_freq">警示灯闪烁频率</string>
